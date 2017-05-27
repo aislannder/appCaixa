@@ -1,17 +1,49 @@
 <ion-header>
   <ion-navbar>
     <ion-title>Home</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="logout()" icon-only color="laranja">
+        <ion-icon name="log-out"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content>
+  <ion-grid>
+    <ion-row class="header">
+      <ion-list>
+        <ion-fab right top>
+          <button ion-button clear color="laranja">
+            <ion-icon name="mail"></ion-icon>
+          </button>
+        </ion-fab>
+        <br>
+        
+        <ion-item class="azul" text-center>
+          <img class="profile" src="https://randomuser.me/api/portraits/women/56.jpg" alt="">
+          <h3>Chica da Silva</h3>
+        </ion-item>
+        
+        <ion-item class="azul" text-center>
+          <h1><b>Saldo R$654.684,00</b></h1>
+        </ion-item>
+      </ion-list>
+    </ion-row>
+
+  </ion-grid>
+
+  <ion-list>
+    <ion-item *ngFor="let item of historico">
+      <ion-avatar item-left>
+        <img src="https://placehold.it/100x100">
+      </ion-avatar>
+      <h2 *ngIf="item.tipo == 'debito'" style="color:red">- R${{item.valor}}</h2>
+      <h2 *ngIf="item.tipo == 'credito'" style="color:blue">+ R${{item.valor}}</h2>
+      <p>{{item.descricao}} {{item.data}}</p>
+      <button ion-button clear large item-right>
+        <ion-icon name="ios-arrow-forward"></ion-icon>
+      </button>
+    </ion-item>
+  </ion-list>
 </ion-content>

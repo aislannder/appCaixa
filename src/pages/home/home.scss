@@ -1,3 +1,27 @@
 page-home {
+    display: flex;
 
+    .header{
+        background-color: color($colors, primary);
+        justify-content: center;
+        align-items: center;
+    }
+    .azul{
+        background-color: color($colors, primary);
+        color: #ECECEC;
+    }
+    .item-inner{
+        border-bottom: 0px!important;
+    }
+    .item-block{
+        border-bottom: 0px!important;
+    }
+    .profile{
+        border-radius: 50%;
+        width: 5em;
+        justify-content: center;
+    }
+    .grid{
+        padding:0px;
+    }
 }

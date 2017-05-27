@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Pagamentos
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="logout()" icon-only color="laranja">
+        <ion-icon name="log-out"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-icon name="barcode" padding></ion-icon>
+      Ler código de barras
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="document" padding></ion-icon>
+      Digitar código de barras
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="key" padding></ion-icon>
+      Boleto Registrado
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Transferências
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="logout()" icon-only color="laranja">
+        <ion-icon name="log-out"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-list-header>Favoritas</ion-list-header>
+    <ion-item>
+      <ion-avatar item-left>
+        <img src="https://placehold.it/100x100">
+      </ion-avatar>
+      Odebrecht
+    </ion-item>
+    <ion-item>
+      <ion-avatar item-left>
+        <img src="https://placehold.it/100x100">
+      </ion-avatar>
+      Temer
+    </ion-item>
+    <ion-item>
+      <ion-avatar item-left>
+        <img src="https://placehold.it/100x100">
+      </ion-avatar>
+      Joesley
+    </ion-item>
+  </ion-list>
+
+</ion-content>
+<ion-footer padding>
+  <button ion-button full (click)="novaTransferencia()">Nova Transferência</button>
+</ion-footer>
